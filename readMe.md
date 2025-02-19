@@ -1,3 +1,7 @@
+# Usefuls command 
+
+[![Visit Repository](https://img.shields.io/badge/Visit-Tekaya1%2FUseful--Command-blue?style=for-the-badge&logo=github)](https://github.com/Tekaya1/linux)
+
 # Exercices de Gestion LVM
 
 ## Exercice 1 : Opérations de base sur LVM
