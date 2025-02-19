@@ -77,7 +77,7 @@ vgcreate vg-lab /dev/sdb1 -s 32M
 lvcreate -n lv1 -l 70 vg-lab
 mkfs.vfat /dev/vg-lab/lv1
 mkdir /mnt/lv1
-echo "/dev/vg-lab/lv1 /mnt/lv1 vfat defaults 0 0" >> /etc/fstab
+echo "uuid=xxxxxxx-xxxxxxx-xxxxx /dev/vg-lab/lv1 /mnt/lv1 vfat defaults 0 0" >> /etc/fstab
 mount -a
 
 # Créer et configurer LV2 (30 LE, xfs, montage temporaire)
