@@ -165,7 +165,7 @@ swapon -a
 fdisk /dev/sdb
 mkfs.ext4 /dev/sdb2
 mkdir /part
-echo "/dev/sdb2 /part ext4 defaults 0 0" >> /etc/fstab
+echo "uuid=xxxxxxx-xxxxxxx-xxxxx /dev/sdb2 /part ext4 defaults 0 0" >> /etc/fstab
 mount -a
 ```
 
