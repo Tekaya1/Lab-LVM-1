@@ -28,13 +28,13 @@ mount /dev/vg1/lv1 /lv1
 lvcreate -n lv2 -L 500M vg1
 mkfs.xfs /dev/vg1/lv2
 mkdir /lv2
-echo "/dev/vg1/lv2 /lv2 xfs defaults 0 0" >> /etc/fstab
+echo "uuid=xxxxxxx-xxxxxxx-xxxxx /dev/vg1/lv2 /lv2 xfs defaults 0 0" >> /etc/fstab 
 mount -a
 
 # Créer et configurer LV3 (300M, swap)
 lvcreate -n lv3 -L 300M vg1
 mkswap /dev/vg1/lv3
-echo "/dev/vg1/lv3 swap swap defaults 0 0" >> /etc/fstab
+echo "uuid=xxxxxxx-xxxxxxx-xxxxx /dev/vg1/lv3 swap swap defaults 0 0" >> /etc/fstab
 swapon -a
 ```
 
@@ -114,7 +114,7 @@ vgcreate data /dev/sdb1 -s 32M
 lvcreate -n lv1 -L 317M data
 mkfs.xfs /dev/data/lv1
 mkdir /lv1
-echo "/dev/data/lv1 /lv1 xfs defaults 0 0" >> /etc/fstab
+echo "uuid=xxxxxxx-xxxxxxx-xxxxx /dev/data/lv1 /lv1 xfs defaults 0 0" >> /etc/fstab
 mount -a
 
 # Créer et configurer LV2 (10 LE, ext4, montage temporaire)
@@ -158,7 +158,7 @@ vgremove data
 # Créer une partition SWAP (512M)
 fdisk /dev/sdb
 mkswap /dev/sdb1
-echo "/dev/sdb1 swap swap defaults 0 0" >> /etc/fstab
+echo "uuid=xxxxxxx-xxxxxxx-xxxxx /dev/sdb1 swap swap defaults 0 0" >> /etc/fstab
 swapon -a
 
 # Créer une partition de 1G formatée en EXT4 (montage permanent)
@@ -179,7 +179,7 @@ vgcreate group /dev/sdb3 -s 17M
 lvcreate -n lv -L 200M group
 mkfs.ext4 /dev/group/lv
 mkdir /volume
-echo "/dev/group/lv /volume ext4 defaults 0 0" >> /etc/fstab
+echo "uuid=xxxxxxx-xxxxxxx-xxxxx /dev/group/lv /volume ext4 defaults 0 0" >> /etc/fstab
 mount -a
 ```
 
