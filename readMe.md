@@ -1,6 +1,6 @@
 # Commande Utile
 
-[![Visit Repository](https://img.shields.io/badge/Visit-Tekaya1%2FCommande--Utile-orange?style=for-the-badge&logo=github)](https://github.com/Tekaya1/linux)
+[![Visit Repository](https://img.shields.io/badge/Visit-Commande--Utile-orange?style=for-the-badge&logo=github)](https://github.com/Tekaya1/linux)
 
 # Exercices de Gestion LVM
 
